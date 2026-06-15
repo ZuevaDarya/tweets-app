@@ -1,6 +1,6 @@
+import Tweet from "@/components/tweet/Tweet";
 import MOCK_TWEETS from "@/shared/data/mock-tweets";
 import st from "./page.module.css";
-import Tweet from "./tweet/Tweet";
 
 export default function Home() {
   return (

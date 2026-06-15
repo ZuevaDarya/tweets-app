@@ -7,10 +7,17 @@
 .tweet__tw-head {
 }
 
-.tw-head__author {
+.tw-head__text {
 }
 
-.tw-head__text {
+.tw-head__author-link {
+  transition: color 0.3s ease;
+}
+
+.tw-head__author-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: orangered;
 }
 
 .tw-head {

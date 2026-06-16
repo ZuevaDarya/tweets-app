@@ -8,19 +8,3 @@
   justify-content: space-between;
   align-items: center;
 }
-
-.header__nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  gap: 2em;
-}
-
-.header__nav > a {
-  transition: color 0.3s ease;
-}
-
-.header__nav > a:hover {
-  cursor: pointer;
-  color: orangered;
-}

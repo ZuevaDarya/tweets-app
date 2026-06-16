@@ -1,21 +1,32 @@
+import st from "@/app/(public)/(home)/page.module.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "User profile",
 };
 
+type TParams = {
+  userId: string;
+};
+
+type TSearchParams = {
+  tag?: string;
+};
+
 interface IProps {
-  params: Promise<{
-    userId: string;
-  }>;
+  params: Promise<TParams>;
+  searchParams: Promise<TSearchParams>;
 }
 
-async function Profile({ params }: IProps) {
+async function Profile({ params, searchParams }: IProps) {
   const { userId } = await params;
+  const { tag } = await searchParams;
 
   return (
     <div>
-      <p>{userId} profile</p>
+      <h1 className={st.title}>
+        @{userId} profile {!!tag && `by #${tag}`}
+      </h1>
     </div>
   );
 }

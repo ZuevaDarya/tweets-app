@@ -19,6 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
+      <head>
+        <link rel="icon" href="/tiger-logo.svg" />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

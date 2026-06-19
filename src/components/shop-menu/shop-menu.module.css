@@ -1,0 +1,7 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 15px;
+  margin-block: 10px;
+}

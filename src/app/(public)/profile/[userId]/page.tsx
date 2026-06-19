@@ -1,9 +1,15 @@
 import st from "@/app/(public)/(home)/page.module.css";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "User profile",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<TParams>;
+}): Promise<Metadata> {
+  return {
+    title: "@" + (await params).userId,
+  };
+}
 
 type TParams = {
   userId: string;
